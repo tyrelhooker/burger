@@ -1,5 +1,5 @@
 // Dependencies 
-var connection = require("..config/connection.js");
+var connection = require("./connection.js");
 
 // ORM Methods to query db table
 var orm = {
@@ -26,10 +26,6 @@ var orm = {
     });
   }
 }
-
-
-
-
 
 module.exports = orm;
 
