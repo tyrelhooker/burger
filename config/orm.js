@@ -25,7 +25,7 @@ var orm = {
       callback(results);
     });
   }
-}
+};
 
 module.exports = orm;
 
