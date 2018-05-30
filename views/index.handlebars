@@ -1,27 +1,28 @@
 <h1>Eat the Burger!</h1>
 
 <h2>Available Burgers</h2>
+
 <ul>
-  {{#each bugers}}
+  {{#each burgers}}
     {{#unless devoured}}
-      {{>burgers/burger-block devoured=true}}
+      {{> burgers/burger-block devour=true}}
     {{/unless}}
   {{/each}}
 </ul>
 {{!-- <ul>
   {{#each burgers}}
     <li>
-      <p>{{this.id}} {{this.burger_name}}</p>
-      <button data-id="{{this.id}}" class="devourBurger">Devour</button>
+      <p>{{this.id}} {{this.burger_name}}
+      <button data-id="{{this.id}}" class="devourBurger">Devour</button></p>
     </li>
   {{/each}}
 </ul> --}}
 
 <h2>Devoured Burgers</h2>
 <ul>
-  {{#each bugers}}
+  {{#each burgers}}
     {{#if devoured}}
-      {{>burgers/burger-block devoured=false}}
+      {{> burgers/burger-block devour=false}}
     {{/if}}
   {{/each}}
 </ul>

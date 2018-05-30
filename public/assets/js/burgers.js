@@ -10,8 +10,8 @@ $(function() {
     
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newDevoured
-    }). then (
+      data: newDevouredState
+    }). then(
       function() {
         console.log("Changed devoured state to: ", newDevoured);
         location.reload();

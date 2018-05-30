@@ -1,8 +1,7 @@
-{{!-- Potential button added when burger is devoured. Include in partials? --}}
+{{!-- Displays name and devour state button to page --}}
 <li>
-	{{name}}
-
-	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}}Add Burger Again{{else}}Devour{{/if}}
+	{{burger_name}}
+	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devour}}">
+		{{#if devour}}Devour{{else}}Add Burger Again{{/if}}
 	</button>
 </li>
