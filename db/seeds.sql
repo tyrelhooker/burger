@@ -1,2 +1,2 @@
-INSERT INTO burgers (burger_name, devoured)
-VALUES("El Diablo", FALSE), ("Tejas Burger", FALSE), ("Queso Burger", FALSE), ("El Chupacrabe", FALSE);
+INSERT INTO burgers (burger_name)
+VALUES("El Diablo"), ("Tejas Burger"), ("Queso Burger"), ("El Chupacrabe");
