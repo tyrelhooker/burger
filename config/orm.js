@@ -27,7 +27,7 @@ function objToSql(ob) {
 var orm = {
   // Method for performing a query of the entire db table. Callback ensures the data is returned only once the query is done
   selectAll: function(tableInput, callback) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
+    var queryString = `SELECT * FROM ${tableInput};`;
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -36,17 +36,22 @@ var orm = {
     });
   },
   // Method for adding burgers to db.
-  insertOne: function(burger, callback) {
-    var newBurger = "INSERT INTO burgers (burger_name, devoured) VALUES (?, ?)";
-    burger.devoured = burger.devoured || 0;
-    connection.query(newBurger, [burger.burger_name, burger.devoured], function(err, result) {
+  insertOne: function(table, cols, vals, callback) {
+    var newBurger = `INSERT INTO ${table} (${cols.toString()}) VALUES (${printQuestionMarks(vals.length)})`;
+
+    console.log(newBurger);
+
+    connection.query(newBurger, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
       callback(result);
     });
   },
   // Method for accessing & updating burgers in db from !devoured to devoured
   updateOne: function(table, objColVals, condition, callback) {
-    // var eatBurger = `UPDATE ${table} SET ${objColVals} WHERE ${condition}`;
-    var eatBurger = "UPDATE " + table + " SET " + objToSql(objColVals) + " WHERE " + condition + ";";
+    var eatBurger = `UPDATE ${table} SET ${objToSql(objColVals)} WHERE ${condition};`
+    // var eatBurger = "UPDATE " + table + " SET " + objToSql(objColVals) + " WHERE " + condition + ";";
     connection.query(eatBurger, function(err, result) {
       if (err) {
         throw err;

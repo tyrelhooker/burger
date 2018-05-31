@@ -23,11 +23,13 @@ $(function() {
     event.preventDefault();
     var newBurger = {
       burger_name: $("#burg").val().trim(),
+      devoured: 0
     };
 
     $.ajax("/api/burgers", {
       type: "POST",
-      data: newBurger
+      data: newBurger,
+
     }).then(
       function() {
         console.log("created a new burger");
