@@ -7,11 +7,7 @@ $(function() {
     console.log($(this).data("newdevoured"));
     if ((currentBites < totalBites) && ($(this).data("newdevoured") === true)) {
       currentBites++;
-      // $('#progress-bar{{id}}').css("width", Math.round(100 * currentBites / totalBites) + "%");
       $(this).siblings('.progress').find('.progress-bar').css("width", Math.round(100 * currentBites / totalBites) + "%");
-      if ($(".progress-bar").data("width") === 80) {
-        console.log("It's at 80%!");
-      }
     } else {
       var id = $(this).data("id");
       var newDevoured = $(this).data("newdevoured");
