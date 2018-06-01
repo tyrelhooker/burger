@@ -17,7 +17,7 @@ body {
 .title {
   text-align: center;
   background-color: oldlace;
-  padding: 5px;
+  padding: 5px 5px;
 }
 
 h1 {
@@ -30,11 +30,11 @@ h2 {
 
 ul {
   background-color:  #a2c658;
-  padding: 5px 0px 10px 0px;
+  padding: 5px 0px 20px 0px;
+  margin: 0px;
 }
 
 li {
-  text-align: left;
   list-style-type: none;
   padding: 5px;
   text-align: center;
@@ -43,12 +43,12 @@ li {
 .change-devoured {
   margin-top: 5px;
   background-color: #F9CA33;
-  border-radius:10px 10px;
+  border-radius: 10px 10px;
 }
 
 .add-burg {
-  background-color: tomato;
-  border-radius:10px 10px;
+  background-color: #F9CA33;
+  border-radius: 10px 10px;
 }
 
 .progress {
@@ -69,11 +69,12 @@ li {
   background-color: #B78654;
   border-radius: 0px 0px 50px 50px;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
 .create-form {
   background-color:  #a2c658;
-  padding: 5px;
+  padding: 5px 5px 15px 5px;
 }
 
 #burg {
