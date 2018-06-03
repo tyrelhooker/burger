@@ -1,6 +1,7 @@
 body {
   background-color: oldlace;
   margin-top: 10px;
+  font-family: "Permanent Marker", Arial, "Helvetica Neue", Helvetica, sans-serif; 
 }
 
 .main-title {
@@ -38,6 +39,8 @@ li {
   list-style-type: none;
   padding: 5px;
   text-align: center;
+  font-family: 'Caveat', Arial, "Helvetica Neue", Helvetica, sans-serif; 
+  font-size: 22px;
 }
 
 .change-devoured {
@@ -75,6 +78,8 @@ li {
 .create-form {
   background-color:  #a2c658;
   padding: 5px 5px 15px 5px;
+  font-family: 'Caveat', Arial, "Helvetica Neue", Helvetica, sans-serif; 
+  font-size: 22px;
 }
 
 #burg {
