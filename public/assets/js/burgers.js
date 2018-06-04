@@ -11,7 +11,6 @@ $(function() {
     } else {
       var id = $(this).data("id");
       var newDevoured = $(this).data("newdevoured");
-  
       var newDevouredState = {
         devoured: newDevoured
       };
